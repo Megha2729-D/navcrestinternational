@@ -1386,6 +1386,7 @@ Sticky Header
 
 .mobile-menu .nav-logo img {
     max-height: 50px;
+    filter: brightness(0) invert(1);
 }
 
 .mobile-menu .menu-box {
