@@ -1850,6 +1850,7 @@ main {
 }
 
 .hero-content {
+    padding-top: 50px;
     position: relative;
     z-index: 2;
     height: 100%;
@@ -1859,6 +1860,8 @@ main {
 
 .hero-text {
     max-width: 620px;
+    margin: auto;
+    text-align: center;
     color: #fff;
     padding-top: 50px
 }
@@ -1896,7 +1899,8 @@ main {
 
 .hero-buttons {
     display: flex;
-    gap: 13px
+    gap: 13px;
+    justify-content: center;
 }
 
 .butt_primary,
@@ -2205,7 +2209,8 @@ main {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(to right, #ffffff 0%, #ffffff93 43%, #ffffff00 75%);
+    background: linear-gradient(to right, #ffffff00 0%, #ffffffad 20%, #ffffffad 80%, #ffffff00 100%);
+    /* background: linear-gradient(to right, #ffffff 0%, #ffffff93 43%, #ffffff00 75%); */
 }
 
 .hero-bg:before {
@@ -2236,7 +2241,7 @@ main {
 }
 
 .hero-text {
-    max-width: 590px;
+    max-width: 600px;
     padding: 80px 0
 }
 
@@ -2268,10 +2273,10 @@ main {
 }
 
 .hero-description {
-    color: #1f2c26;
+    color: #0c0f0e;
     font-size: 14px;
     line-height: 1.65;
-    max-width: 520px;
+    /* max-width: 520px; */
     margin-bottom: 22px
 }
 
@@ -2328,6 +2333,7 @@ main {
         justify-content: center;
     }
 }
+
 @media screen and (max-width: 700px) {
     .hero-bg:before {
         display: none;
@@ -3379,7 +3385,7 @@ main {
     }
 
     .nc-product-image {
-        height: 125px
+        height: 170px
     }
 
     .nc-process-step {
@@ -3439,5 +3445,61 @@ main {
         margin-top: -20px;
         margin-left: 20px;
         width: calc(100% - 40px)
+    }
+}
+
+.floating-contact-buttons {
+    position: fixed;
+    right: 20px;
+    bottom: 75px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 9999;
+}
+
+.contact-float {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    text-decoration: none;
+    box-shadow: 0 6px 20px #00000033;
+    transition: all 0.3s ease;
+}
+
+.contact-float:hover {
+    color: #fff;
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 10px 25px #00000040;
+}
+
+.whatsapp-float {
+    background: #25D366;
+}
+
+.email-float {
+    background: #EA4335;
+}
+
+.call-float {
+    background: #0D6EFD;
+}
+
+@media (max-width: 576px) {
+    .floating-contact-buttons {
+        right: 20px;
+        bottom: 75px;
+        gap: 10px;
+    }
+
+    .contact-float {
+        width: 42px;
+        height: 42px;
+        font-size: 20px;
     }
 }
