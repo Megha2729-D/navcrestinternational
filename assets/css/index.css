@@ -5415,6 +5415,10 @@ RESPONSIVE
         height: 270px;
     }
 
+    .nc-spec-table th {
+        width: auto;
+    }
+
     .nc-spec-table th,
     .nc-spec-table td {
         padding: 13px 15px;
