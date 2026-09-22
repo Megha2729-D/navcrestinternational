@@ -4437,7 +4437,6 @@ main {
    CONTACT FORM
 ========================================================= */
 .nc-contact-form-wrapper {
-    background: #f5f8f3;
     border: 1px solid #e3eae2;
     border-radius: 18px;
     padding: 40px;
@@ -4941,7 +4940,6 @@ PRODUCT DETAIL HERO
 ========================================================= */
 .nc-product-detail-hero {
     padding: 80px 0;
-    background: #f5f8f3;
     overflow: hidden;
 }
 
@@ -5076,10 +5074,6 @@ PRODUCT DETAIL COMMON
 /* =========================================================
 PRODUCT HIGHLIGHTS
 ========================================================= */
-.nc-product-highlights {
-    background: #f5f8f3;
-}
-
 .nc-product-highlight-card {
     height: 100%;
     padding: 30px 25px;
@@ -5222,10 +5216,6 @@ PRODUCT SPECIFICATIONS
 /* =========================================================
 PRODUCT APPLICATIONS
 ========================================================= */
-.nc-product-applications {
-    background: #f5f8f3;
-}
-
 .nc-application-card {
     height: 100%;
     padding: 30px 25px;
