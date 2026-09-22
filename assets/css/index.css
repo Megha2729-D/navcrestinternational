@@ -2510,6 +2510,7 @@ main {
 
 .nc-product-card h3 {
     margin: 15px 0 0;
+    padding: 0 5px;
     text-align: center;
     font-size: 18px;
     line-height: 1.4;
@@ -2520,6 +2521,7 @@ main {
 
 .nc-product-card p {
     text-align: center;
+    padding: 0 5px;
 }
 
 .nc-products-swiper .swiper-pagination {
