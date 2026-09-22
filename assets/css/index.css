@@ -3702,10 +3702,6 @@ main {
 
 /* ================= JOURNEY ================= */
 
-.nc-journey {
-    background: #fafbf8;
-}
-
 .nc-journey-copy p {
     font-size: 14px;
     color: #63716b;
@@ -3880,11 +3876,6 @@ main {
 }
 
 /* ================= ADVANTAGES ================= */
-
-.nc-advantages {
-    background: #fafbf8;
-}
-
 .nc-adv-card {
     background: #fff;
     border: 1px solid #e1e8e0;
