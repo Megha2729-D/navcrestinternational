@@ -91,23 +91,35 @@
                                     <a href="index.html">Home</a>
                                 </li>
                                 <li>
-                                    <a href="#">About Us</a>
+                                    <a href="about-us.html">About Us</a>
+                                </li>
+                                <li class="dropdown"><a href="products.html">Our Products</a>
+                                    <ul>
+                                        <li><a href="5kg-coco-peat-blocks.html">5 KG Coco Peat Blocks</a></li>
+                                        <li><a href="recurring-deposit.html">5 KG Custom Mix Blocks</a></li>
+                                        <li><a href="5kg-buffered-coco-peat-blocks.html">5 KG Buffered Coco Peat Blocks
+                                            </a></li>
+                                        <li><a href="coco-chips-5kg-blocks.html">Coco Chips 5 KG Blocks </a></li>
+                                        <li><a href="coco-peat-650g-bricks.html">Coco Peat 650G Bricks </a></li>
+                                        <li><a href="flat-bed-grow-bags.html">Flat Bed Grow Bags</a></li>
+
+                                    </ul>
+                                </li>
+                                <!-- <li>
+                                    <a href="products.html">Our Products</a>
+                                </li> -->
+                                <li>
+                                    <a href="index.html#faq">FAQs</a>
                                 </li>
                                 <li>
-                                    <a href="#">Our Products</a>
-                                </li>
-                                <li>
-                                    <a href="#">FAQs</a>
-                                </li>
-                                <li>
-                                    <a href="#">Contact Us</a>
+                                    <a href="contact-us.html">Contact Us</a>
                                 </li>
                             </ul>
                         </nav>
                     </div>
                     <div class="outer-box">
                         <div class="info-box">
-                            <a href="#" class="butt_primary">
+                            <a href="contact-us.html" class="butt_primary">
                                 Contact Us <span>→</span>
                             </a>
                         </div>
@@ -243,7 +255,7 @@
                                         <a href="#" class="butt_primary">
                                             Explore Products <span>→</span>
                                         </a>
-                                        <a href="contact.html" class="butt_secondary">
+                                        <a href="contact-us.html" class="butt_secondary">
                                             Contact Us
                                         </a>
                                     </div>
@@ -275,7 +287,7 @@
                                         <a href="products.html" class="butt_primary">
                                             Explore Products <span>→</span>
                                         </a>
-                                        <a href="contact.html" class="butt_secondary">
+                                        <a href="contact-us.html" class="butt_secondary">
                                             Contact Us
                                         </a>
                                     </div>
@@ -307,7 +319,7 @@
                                         <a href="products.html" class="butt_primary">
                                             Explore Products <span>→</span>
                                         </a>
-                                        <a href="contact.html" class="butt_secondary">
+                                        <a href="contact-us.html" class="butt_secondary">
                                             Contact Us
                                         </a>
                                     </div>
@@ -1060,9 +1072,9 @@
                                 <h2>Ready to Partner for<br>a Greener Tomorrow?</h2>
                                 <p>Let's build a long-term and sustainable future together.</p>
                                 <div class="nc-cta-buttons">
-                                    <a href="contact.html" class="nc-btn nc-btn-primary">Get a Quote <i
+                                    <a href="contact-us.html" class="nc-btn nc-btn-primary">Get a Quote <i
                                             class="bi bi-arrow-right"></i></a>
-                                    <a href="contact.html" class="nc-btn nc-btn-white">Contact Us</a>
+                                    <a href="contact-us.html" class="nc-btn nc-btn-white">Contact Us</a>
                                 </div>
                             </div>
                         </div>
@@ -1103,9 +1115,9 @@
                         <div class="footer-links">
                             <h4>Quick Links</h4>
                             <a href="index.html">Home</a>
-                            <a href="#">About Us</a>
-                            <a href="#">FAQs</a>
-                            <a href="#">Contact</a>
+                            <a href="about-us.html">About Us</a>
+                            <a href="index.html#faq">FAQs</a>
+                            <a href="contact-us.html">Contact</a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-6 my-3 my-lg-0 d-flex justify-content-lg-center">
@@ -1114,7 +1126,7 @@
                             <a href="#">Coco Peat Blocks</a>
                             <a href="#">Custom Mix Blocks</a>
                             <a href="#">Buffered Coco Peat Blocks</a>
-                            <a href="#">More Products</a>
+                            <a href="products.html">More Products</a>
                         </div>
                     </div>
                     <div class="col-lg-3 my-3 my-lg-0">
@@ -1225,7 +1237,7 @@
         //Submenu Dropdown Toggle
         if ($(".main-header li.dropdown ul").length) {
             $(".main-header .navigation li.dropdown").append(
-                '<div class="dropdown-btn"><i class="fa fa-angle-down"></i></div>'
+                '<div class="dropdown-btn"><i class="bi bi-chevron-down"></i></div>'
             );
             //Megamenu Toggle
         }
@@ -1287,6 +1299,8 @@
             });
         }
     </script>
+
+
     <script>
         const heroSwiper = new Swiper(".hero-swiper", {
             slidesPerView: 1,
