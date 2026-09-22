@@ -5133,7 +5133,7 @@ PRODUCT SPECIFICATIONS
     margin: 0;
     border-collapse: collapse;
 }
-
+/* 
 .nc-product-specifications {
     overflow: auto !important;
 }
@@ -5154,13 +5154,13 @@ PRODUCT SPECIFICATIONS
     position: sticky;
     top: 120px;
     z-index: 5;
-}
+} */
 
-@media (max-width: 991px) {
+/* @media (max-width: 991px) {
     .nc-product-specifications .col-lg-5>div {
         position: static;
     }
-}
+} */
 
 .nc-spec-table th,
 .nc-spec-table td {
