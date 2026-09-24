@@ -302,78 +302,143 @@
                                     <p>Share your requirements with us and our team will get back to you with the
                                         relevant information.</p>
                                 </div>
-                                <form class="nc-contact-form" action="#" method="POST">
+
+                                <form class="nc-contact-form" action="send-mail.php" method="POST" novalidate>
+
+                                    <!-- Honeypot field -->
+                                    <div class="d-none">
+                                        <label for="user_url">Website</label>
+                                        <input type="text" id="user_url" name="user_url" tabindex="-1"
+                                            autocomplete="off">
+                                    </div>
                                     <div class="row g-4">
+
+                                        <!-- Name -->
                                         <div class="col-md-6">
-                                            <label for="name">Name <span class="text-danger">*</span></label>
-                                            <div class="nc-input-group"><i class="bi bi-person"></i><input type="text"
-                                                    id="name" name="name" class="form-control" placeholder="Your Name"
-                                                    required></div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label for="email">Email <span class="text-danger">*</span></label>
-                                            <div class="nc-input-group"><i class="bi bi-envelope"></i><input
-                                                    type="email" id="email" name="email" class="form-control"
-                                                    placeholder="Your Email Address" required></div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label for="country">Country <span class="text-danger">*</span></label>
-                                            <div class="nc-input-group"><i class="bi bi-globe2"></i><input type="text"
-                                                    id="country" name="country" class="form-control"
-                                                    placeholder="Your Country" required></div>
-                                        </div>
-                                        <div class="col-12">
-                                            <label class="nc-product-label">Select Product <span
-                                                    class="text-danger">*</span></label>
-                                            <div class="nc-product-checkboxes">
-                                                <label class="nc-checkbox-item"><input type="checkbox" name="products[]"
-                                                        value="5 KG Coco Peat Blocks"><span
-                                                        class="nc-custom-checkbox"><i
-                                                            class="bi bi-check"></i></span><span>5 KG Coco Peat
-                                                        Blocks</span></label>
-                                                <label class="nc-checkbox-item"><input type="checkbox" name="products[]"
-                                                        value="5 KG Custom Mix Blocks"><span
-                                                        class="nc-custom-checkbox"><i
-                                                            class="bi bi-check"></i></span><span>5 KG Custom Mix
-                                                        Blocks</span></label>
-                                                <label class="nc-checkbox-item"><input type="checkbox" name="products[]"
-                                                        value="5 KG Buffered Coco Peat Blocks"><span
-                                                        class="nc-custom-checkbox"><i
-                                                            class="bi bi-check"></i></span><span>5 KG Buffered Coco Peat
-                                                        Blocks</span></label>
-                                                <label class="nc-checkbox-item"><input type="checkbox" name="products[]"
-                                                        value="Coco Chips 5 KG Blocks"><span
-                                                        class="nc-custom-checkbox"><i
-                                                            class="bi bi-check"></i></span><span>Coco Chips 5 KG
-                                                        Blocks</span></label>
-                                                <label class="nc-checkbox-item"><input type="checkbox" name="products[]"
-                                                        value="Coco Peat 650G Bricks"><span
-                                                        class="nc-custom-checkbox"><i
-                                                            class="bi bi-check"></i></span><span>Coco Peat 650G
-                                                        Bricks</span></label>
-                                                <label class="nc-checkbox-item"><input type="checkbox" name="products[]"
-                                                        value="Flat Bed Grow Bags"><span class="nc-custom-checkbox"><i
-                                                            class="bi bi-check"></i></span><span>Flat Bed Grow
-                                                        Bags</span></label>
+                                            <label for="name">
+                                                Name <span class="text-danger">*</span>
+                                            </label>
+                                            <div class="nc-input-group">
+                                                <i class="bi bi-person"></i>
+                                                <input type="text" id="name" name="name" class="form-control"
+                                                    placeholder="Your Name" autocomplete="name">
                                             </div>
+                                            <span class="nc-error" id="name-error"></span>
                                         </div>
+
+                                        <!-- Email -->
+                                        <div class="col-md-6">
+                                            <label for="email">
+                                                Email <span class="text-danger">*</span>
+                                            </label>
+                                            <div class="nc-input-group">
+                                                <i class="bi bi-envelope"></i>
+                                                <input type="email" id="email" name="email" class="form-control"
+                                                    placeholder="Your Email Address" autocomplete="email">
+                                            </div>
+                                            <span class="nc-error" id="email-error"></span>
+                                        </div>
+
+                                        <!-- Country -->
+                                        <div class="col-md-6">
+                                            <label for="country">
+                                                Country <span class="text-danger">*</span>
+                                            </label>
+                                            <div class="nc-input-group">
+                                                <i class="bi bi-globe2"></i>
+                                                <input type="text" id="country" name="country" class="form-control"
+                                                    placeholder="Your Country" autocomplete="country-name">
+                                            </div>
+                                            <span class="nc-error" id="country-error"></span>
+                                        </div>
+
+                                        <!-- Products -->
                                         <div class="col-12">
-                                            <label for="message">Message <span class="text-danger">*</span></label>
-                                            <div class="nc-input-group nc-textarea-group"><i
-                                                    class="bi bi-chat-left-text"></i><textarea id="message"
-                                                    name="message" class="form-control" rows="5"
-                                                    placeholder="Tell us about your requirements..."
-                                                    required></textarea></div>
+                                            <label class="nc-product-label">
+                                                Select Product <span class="text-danger">*</span>
+                                            </label>
+                                            <div class="nc-product-checkboxes" id="products-group">
+                                                <label class="nc-checkbox-item">
+                                                    <input type="checkbox" name="products[]"
+                                                        value="5 KG Coco Peat Blocks">
+                                                    <span class="nc-custom-checkbox">
+                                                        <i class="bi bi-check"></i>
+                                                    </span>
+                                                    <span>5 KG Coco Peat Blocks</span>
+                                                </label>
+                                                <label class="nc-checkbox-item">
+                                                    <input type="checkbox" name="products[]"
+                                                        value="5 KG Custom Mix Blocks">
+                                                    <span class="nc-custom-checkbox">
+                                                        <i class="bi bi-check"></i>
+                                                    </span>
+                                                    <span>5 KG Custom Mix Blocks</span>
+                                                </label>
+                                                <label class="nc-checkbox-item">
+                                                    <input type="checkbox" name="products[]"
+                                                        value="5 KG Buffered Coco Peat Blocks">
+                                                    <span class="nc-custom-checkbox">
+                                                        <i class="bi bi-check"></i>
+                                                    </span>
+                                                    <span>5 KG Buffered Coco Peat Blocks</span>
+                                                </label>
+                                                <label class="nc-checkbox-item">
+                                                    <input type="checkbox" name="products[]"
+                                                        value="Coco Chips 5 KG Blocks">
+                                                    <span class="nc-custom-checkbox">
+                                                        <i class="bi bi-check"></i>
+                                                    </span>
+                                                    <span>Coco Chips 5 KG Blocks</span>
+                                                </label>
+                                                <label class="nc-checkbox-item">
+                                                    <input type="checkbox" name="products[]"
+                                                        value="Coco Peat 650G Bricks">
+                                                    <span class="nc-custom-checkbox">
+                                                        <i class="bi bi-check"></i>
+                                                    </span>
+                                                    <span>Coco Peat 650G Bricks</span>
+                                                </label>
+
+                                                <label class="nc-checkbox-item">
+                                                    <input type="checkbox" name="products[]" value="Flat Bed Grow Bags">
+                                                    <span class="nc-custom-checkbox">
+                                                        <i class="bi bi-check"></i>
+                                                    </span>
+                                                    <span>Flat Bed Grow Bags</span>
+                                                </label>
+                                            </div>
+                                            <span class="nc-error" id="products-error"></span>
                                         </div>
+
+                                        <!-- Message -->
+                                        <div class="col-12">
+                                            <label for="message">
+                                                Message <span class="text-danger">*</span>
+                                            </label>
+                                            <div class="nc-input-group nc-textarea-group">
+                                                <i class="bi bi-chat-left-text"></i>
+                                                <textarea id="message" name="message" class="form-control" rows="5"
+                                                    placeholder="Tell us about your requirements..."></textarea>
+                                            </div>
+                                            <span class="nc-error" id="message-error"></span>
+                                        </div>
+
+                                        <!-- reCAPTCHA -->
                                         <div class="col-12">
                                             <div class="nc-captcha">
                                                 <div class="g-recaptcha"
-                                                    data-sitekey="6LfRRMktAAAAACytJtVyb3r--Def93xfa120pj76"></div>
+                                                    data-sitekey="6Lf03cotAAAAAHwM2MsX3gfKcym4OQnUdfUFD6fh">
+                                                </div>
                                             </div>
+                                            <span class="nc-error" id="captcha-error"></span>
                                         </div>
+
+                                        <!-- Submit -->
                                         <div class="col-12">
-                                            <button type="submit" class="nc-btn nc-btn-primary">Submit Inquiry <i
-                                                    class="bi bi-arrow-right"></i></button>
+                                            <button type="submit" class="nc-btn nc-btn-primary" id="submitBtn">
+                                                Submit Inquiry
+                                                <i class="bi bi-arrow-right"></i>
+                                            </button>
                                         </div>
                                     </div>
                                 </form>
@@ -537,7 +602,7 @@
     <script src="assets/js/main.js"></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script>
-        document.addEventListener("DOMContentLoaded", function () { document.querySelectorAll(".nc-faq-question").forEach(function (question) { question.addEventListener("click", function () { const currentItem = this.closest(".nc-faq-item"); document.querySelectorAll(".nc-faq-item").forEach(function (item) { if (item !== currentItem) item.classList.remove("active") }); currentItem.classList.toggle("active") }) }) });
+        document.addEventListener("DOMContentLoaded", function () {document.querySelectorAll(".nc-faq-question").forEach(function (question) {question.addEventListener("click", function () {const currentItem = this.closest(".nc-faq-item"); document.querySelectorAll(".nc-faq-item").forEach(function (item) {if (item !== currentItem) item.classList.remove("active")}); currentItem.classList.toggle("active")})})});
     </script>
     <script>
         const backTop = document.getElementById("backTop");
@@ -656,7 +721,258 @@
             });
         }
     </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
 
+            const form = document.querySelector(".nc-contact-form");
+
+            if (!form) return;
+
+            const nameInput = document.getElementById("name");
+            const emailInput = document.getElementById("email");
+            const countryInput = document.getElementById("country");
+            const messageInput = document.getElementById("message");
+            const productInputs = document.querySelectorAll('input[name="products[]"]');
+            const productsGroup = document.getElementById("products-group");
+            const submitBtn = document.getElementById("submitBtn");
+
+            function showError(input, errorId, message) {
+                if (input) {
+                    input.classList.add("is-invalid");
+                }
+
+                const error = document.getElementById(errorId);
+
+                if (error) {
+                    error.textContent = message;
+                }
+            }
+
+            function removeError(input, errorId) {
+                if (input) {
+                    input.classList.remove("is-invalid");
+                }
+
+                const error = document.getElementById(errorId);
+
+                if (error) {
+                    error.textContent = "";
+                }
+            }
+
+            function validateName() {
+                const value = nameInput.value.trim();
+
+                if (value === "") {
+                    showError(
+                        nameInput,
+                        "name-error",
+                        "Please enter your name."
+                    );
+                    return false;
+                }
+
+                if (value.length < 2) {
+                    showError(
+                        nameInput,
+                        "name-error",
+                        "Name must be at least 2 characters."
+                    );
+                    return false;
+                }
+
+                removeError(nameInput, "name-error");
+                return true;
+            }
+
+            function validateEmail() {
+                const value = emailInput.value.trim();
+
+                if (value === "") {
+                    showError(
+                        emailInput,
+                        "email-error",
+                        "Please enter your email address."
+                    );
+                    return false;
+                }
+
+                const emailPattern =
+                    /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+                if (!emailPattern.test(value)) {
+                    showError(
+                        emailInput,
+                        "email-error",
+                        "Please enter a valid email address."
+                    );
+                    return false;
+                }
+
+                removeError(emailInput, "email-error");
+                return true;
+            }
+
+            function validateCountry() {
+                const value = countryInput.value.trim();
+
+                if (value === "") {
+                    showError(
+                        countryInput,
+                        "country-error",
+                        "Please enter your country."
+                    );
+                    return false;
+                }
+
+                removeError(countryInput, "country-error");
+                return true;
+            }
+
+            function validateProducts() {
+                const checkedProducts = document.querySelectorAll(
+                    'input[name="products[]"]:checked'
+                );
+
+                if (checkedProducts.length === 0) {
+
+                    productInputs.forEach(function (input) {
+                        input.classList.add("is-invalid");
+                    });
+
+                    const error = document.getElementById("products-error");
+
+                    if (error) {
+                        error.textContent = "Please select at least one product.";
+                    }
+
+                    return false;
+                }
+
+                productInputs.forEach(function (input) {
+                    input.classList.remove("is-invalid");
+                });
+
+                const error = document.getElementById("products-error");
+
+                if (error) {
+                    error.textContent = "";
+                }
+
+                return true;
+            }
+
+            function validateMessage() {
+                const value = messageInput.value.trim();
+
+                if (value === "") {
+                    showError(
+                        messageInput,
+                        "message-error",
+                        "Please enter your message."
+                    );
+                    return false;
+                }
+
+                if (value.length < 10) {
+                    showError(
+                        messageInput,
+                        "message-error",
+                        "Please enter at least 10 characters."
+                    );
+                    return false;
+                }
+
+                removeError(messageInput, "message-error");
+                return true;
+            }
+
+            function validateCaptcha() {
+                if (typeof grecaptcha === "undefined") {
+                    return false;
+                }
+
+                const response = grecaptcha.getResponse();
+
+                const error = document.getElementById("captcha-error");
+
+                if (!response) {
+                    if (error) {
+                        error.textContent = "Please verify that you are not a robot.";
+                    }
+
+                    return false;
+                }
+
+                if (error) {
+                    error.textContent = "";
+                }
+
+                return true;
+            }
+
+            /* Remove validation errors while typing */
+
+            nameInput.addEventListener("input", function () {
+                validateName();
+            });
+
+            emailInput.addEventListener("input", function () {
+                validateEmail();
+            });
+
+            countryInput.addEventListener("input", function () {
+                validateCountry();
+            });
+
+            messageInput.addEventListener("input", function () {
+                validateMessage();
+            });
+
+            /* Remove product error when a product is selected */
+
+            productInputs.forEach(function (input) {
+                input.addEventListener("change", function () {
+                    validateProducts();
+                });
+            });
+
+            /* Form submit */
+
+            form.addEventListener("submit", function (event) {
+
+                event.preventDefault();
+
+                const isNameValid = validateName();
+                const isEmailValid = validateEmail();
+                const isCountryValid = validateCountry();
+                const areProductsValid = validateProducts();
+                const isMessageValid = validateMessage();
+                const isCaptchaValid = validateCaptcha();
+
+                const isFormValid =
+                    isNameValid &&
+                    isEmailValid &&
+                    isCountryValid &&
+                    areProductsValid &&
+                    isMessageValid &&
+                    isCaptchaValid;
+
+                if (!isFormValid) {
+                    return;
+                }
+
+                /* Prevent multiple submissions */
+                submitBtn.disabled = true;
+                submitBtn.classList.add("loading");
+                // 'Sending... <i class="bi bi-arrow-repeat"></i>';
+
+                /* Submit to send-mail.php */
+                form.submit();
+            });
+
+        });
+    </script>
 </body>
 
 </html>
