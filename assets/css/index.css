@@ -3748,6 +3748,9 @@ main {
 }
 
 /* ================= JOURNEY ================= */
+.nc-journey-copy {
+    margin-top: 0 !important;
+}
 
 .nc-journey-copy p {
     font-size: 14px;
@@ -4220,6 +4223,10 @@ main {
 /* ================= RESPONSIVE ================= */
 
 @media (max-width: 991px) {
+    .nc-journey-copy {
+        margin-top: 10px !important;
+    }
+
     .nc-nav {
         position: absolute;
         left: 0;
