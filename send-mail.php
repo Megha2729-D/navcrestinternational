@@ -26,13 +26,13 @@ if ($verifyResponse === false) {
     curl_close($ch);
     header("Location: failed.html");
     exit;
-}   
+}
 curl_close($ch);
 $responseData = json_decode($verifyResponse);
 if (!$responseData || empty($responseData->success)) {
     header("Location: failed.html");
     exit;
-} 
+}
 /* |-------------- | COLLECT FORM DATA |-------------- */
 $name = trim($_POST['name'] ?? '');
 $email = trim($_POST['email'] ?? '');
@@ -40,7 +40,7 @@ $country = trim($_POST['country'] ?? '');
 $message = trim($_POST['message'] ?? '');
 $products = $_POST['products'] ?? [];
 
-$adminEmail = 'ddsm2729@gmail.com';
+$adminEmail = 'jawahar@navcrestinternational.com';
 if (!is_array($products)) {
     $products = [];
 } /* |-------------------------------------------------------------------------- | SERVER-SIDE VALIDATION |-------------------------------------------------------------------------- */
@@ -108,7 +108,7 @@ try {
         ]
     ];
     $mail->setFrom('jawahar@navcrestinternational.com', 'Navcrest International');
-    $mail->addAddress('meghu27022002@gmail.com', 'Admin');
+    $mail->addAddress($adminEmail, 'Admin');
     $mail->addReplyTo($email, $name);
     $safeName = htmlspecialchars($name, ENT_QUOTES, 'UTF-8');
     $safeEmail = htmlspecialchars($email, ENT_QUOTES, 'UTF-8');
