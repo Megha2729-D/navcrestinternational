@@ -3676,7 +3676,10 @@ main {
 
 .nc-story-card {
     position: absolute;
-    left: 25px;
+    width: 95%;
+    left: 0;
+    right: 0;
+    margin: auto;
     bottom: -28px;
     background: rgba(246, 249, 242, .96);
     border: 1px solid #dbe6da;
@@ -3690,7 +3693,7 @@ main {
     align-items: center;
     gap: 9px;
     color: var(--nc-dark-green);
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 700;
     white-space: nowrap;
 }
