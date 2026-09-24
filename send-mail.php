@@ -11,7 +11,7 @@ if (!empty($_POST['user_url'])) {
     header("Location: success.html");
     exit;
 } /* |-------------- | GOOGLE reCAPTCHA VERIFICATION |--------------*/
-$recaptchaSecret = '6Lf03cotAAAAAF2WscPi2tqu-7iU38NprIqbS_97';
+$recaptchaSecret = '6LfxscwtAAAAAAxK-3Kx_zUjOt6Cgq-psp6kOae4';
 $recaptchaResponse = $_POST['g-recaptcha-response'] ?? '';
 if (empty($recaptchaResponse)) {
     header("Location: failed.html");
@@ -40,7 +40,7 @@ $country = trim($_POST['country'] ?? '');
 $message = trim($_POST['message'] ?? '');
 $products = $_POST['products'] ?? [];
 
-$adminEmail = 'jawahar@navcrestinternational.com';
+$adminEmail = 'meghu27022002@gmail.com';
 if (!is_array($products)) {
     $products = [];
 } /* |-------------------------------------------------------------------------- | SERVER-SIDE VALIDATION |-------------------------------------------------------------------------- */

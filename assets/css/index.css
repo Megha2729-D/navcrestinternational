@@ -5558,3 +5558,17 @@ button.loading::after {
         transform: translateY(-50%) rotate(360deg);
     }
 }
+
+@media screen and (min-width: 1400px) {
+    p {
+        font-size: 14px !important;
+    }
+
+    .nc-cta-point span {
+        font-size: 13px !important;
+    }
+
+    .nc-cta-points {
+        width: 250px;
+    }
+}
